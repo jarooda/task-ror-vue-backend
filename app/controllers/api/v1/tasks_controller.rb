@@ -2,10 +2,11 @@ module Api
   module V1
     class TasksController < ApplicationController
       before_action :set_task, only: [:show, :update, :destroy]
+      before_action :authorized
 
       # GET /tasks
       def index
-        @tasks = Task.all
+        @tasks = Task.where user: @user.id
 
         render json: @tasks
       end
@@ -18,6 +19,7 @@ module Api
       # POST /tasks
       def create
         @task = Task.new(task_params)
+        @task.user = @user
 
         if @task.save
           render json: @task, status: :created, location: @task
