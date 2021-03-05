@@ -22,7 +22,7 @@ module Api
         @task.user = @user
 
         if @task.save
-          render json: @task, status: :created, location: @task
+          render json: @task, status: :created, location: url_for([:api, :v1, @task])
         else
           render json: @task.errors, status: :unprocessable_entity
         end
@@ -40,6 +40,8 @@ module Api
       # DELETE /tasks/1
       def destroy
         @task.destroy
+
+        render json: { message: "Task deleted." }
       end
 
       private
