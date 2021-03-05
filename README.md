@@ -178,15 +178,13 @@
     **Content:** 
     ```json
     { 
-      [
-        "id": <id>,
-        "title": <title>,
-        "description": <description>,
-        "priorities": <priorities>,
-        "due_date": <due_date>,
-        "status": <status>,
-        "user_id": <user_id>
-      ]
+      "id": <id>,
+      "title": <title>,
+      "description": <description>,
+      "priorities": <priorities>,
+      "due_date": <due_date>,
+      "status": <status>,
+      "user_id": <user_id>
     }
     ```
  
@@ -232,15 +230,13 @@
     **Content:** 
     ```json
     { 
-      [
-        "id": <id>,
-        "title": <title>,
-        "description": <description>,
-        "priorities": <priorities>,
-        "due_date": <due_date>,
-        "status": <status>,
-        "user_id": <user_id>
-      ]
+      "id": <id>,
+      "title": <title>,
+      "description": <description>,
+      "priorities": <priorities>,
+      "due_date": <due_date>,
+      "status": <status>,
+      "user_id": <user_id>
     }
     ```
  
