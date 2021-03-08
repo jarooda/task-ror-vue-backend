@@ -1,8 +1,8 @@
 module Api
   module V1
     class TasksController < ApplicationController
-      before_action :set_task, only: [:show, :update, :destroy]
       before_action :authorized
+      before_action :set_task, only: [:show, :update, :destroy]
 
       # GET /tasks
       def index
@@ -48,6 +48,10 @@ module Api
         # Use callbacks to share common setup or constraints between actions.
         def set_task
           @task = Task.find(params[:id])
+          
+          if @task.user_id != @user.id
+            render json: { message: "Not authorized." }, status: :unauthorized
+          end
         end
 
         # Only allow a list of trusted parameters through.
