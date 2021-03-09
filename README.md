@@ -250,6 +250,16 @@
     }
     ```
 
+    OR
+
+    **Code:** 401 Unauthorized <br />
+    **Content:**
+    ```json
+    {
+      "message": "Not authorized."
+    }
+    ```
+
 **DELETE /api/v1/tasks/:id**
 ---
 * **Method:**
@@ -289,6 +299,16 @@
     ```json
     {
       "message": "Please log in"
+    }
+    ```
+    
+    OR
+
+    **Code:** 401 Unauthorized <br />
+    **Content:**
+    ```json
+    {
+      "message": "Not authorized."
     }
     ```
 
