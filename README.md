@@ -96,6 +96,8 @@
     }
     ```
 
+# Tasks API
+
 **GET /api/v1/tasks**
 ---
 * **Method:**
